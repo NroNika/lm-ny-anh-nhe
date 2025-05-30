@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: black;
+  font-family: Arial, sans-serif;
+}
+
+.background {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.text-line {
+  position: absolute;
+  white-space: nowrap;
+  font-size: 20px;
+  color: hotpink;
+  text-shadow: 0 0 10px hotpink;
+  animation: moveText 15s linear infinite;
+}
+
+.heart {
+  color: red;
+  position: absolute;
+  font-size: 20px;
+  animation: floatHeart 5s ease-in-out infinite;
+}
+
+@keyframes moveText {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+@keyframes floatHeart {
+  0% {
+    opacity: 0;
+    transform: translateY(100vh) scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-100vh) scale(1.5);
+  }
+}
